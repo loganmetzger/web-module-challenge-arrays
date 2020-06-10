@@ -171,14 +171,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 hint - you can use the .includes method to help you solve this */
 
 function filterByWord(arr, flavor){
-    let 
+    let newArray = []
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].includes(flavor)) {
-            
+            newArray.push(arr[i]);
         }
     }
-
+    return newArray
 }
+
+console.log(filterByWord(originalFlavors, 'Chocolate'))
 
 
 
@@ -302,3 +304,6 @@ function getRandomFlavors(arr1){
 
 
 console.log(getRandomFlavors(newFlavors));
+
+
+// call arguments? maps over array and iterate over it
